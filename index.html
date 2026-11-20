@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hanan Mughrabi | Draw to Life</title>
+
+    <!-- refers to my websites design -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PixiJS is used for the interactive drawing area -->
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.6.6/dist/pixi.min.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <!-- Welcome to my portfolio -->
+      <header class="hero">
+        <p class="eyebrow">HANAN MUGHRABI · CREATIVE PROGRAMMING</p>
+
+        <h1>Draw to <span>Life.</span></h1>
+
+        <p class="subtitle">Every drawing starts with a doodle. 🩷</p>
+
+        <p class="description">
+          Welcome to my colorful little world! Här möts kreativitet,
+          programmering och AI. Ett ställe där små idéer kan kan få det lilla
+          extra.
+        </p>
+
+        <!-- This link takes you to the drawing area on the same page but below -->
+        <a href="#playground" class="explore-button">
+          Let's create something ✨
+        </a>
+      </header>
+
+      <!-- A little info about my final project -->
+      <section class="content-card" id="about">
+        <p class="section-label">01 / THE PROJECT</p>
+
+        <h2>From doodles to digital art 🎨</h2>
+
+        <p>
+          Draw to Life är en interaktiv ritapplikation där användaren kan skapa
+          en egen skiss och sedan låta AI omvandla den till ett konstverk.
+        </p>
+
+        <p>
+          Tanken bakom projektet är enkel: alla ska få möjlighet att vara
+          kreativa, experimentera och skapa konst, oavsett tidigare erfarenhet.
+        </p>
+
+        <p>Sometimes all you need is a little imagination!</p>
+      </section>
+
+      <!-- You can try drawing  -->
+      <section class="content-card" id="playground">
+        <p class="section-label">02 / INTERACTIVE PLAYGROUND</p>
+
+        <h2>Draw Your Imagination ✨</h2>
+
+        <p>
+          Välj en färg och rita vad du vill! Tryck sedan på
+          <strong>Bring it to Life</strong>
+          för att få din teckning att lysa, pulsera och glittra.
+        </p>
+
+        <p class="small-note">
+          This is a playful PixiJS experiment. Ingen AI används i just den här
+          ritytan.
+        </p>
+
+        <!-- My drawing tools -->
+        <div class="drawing-tools">
+          <div class="color-options">
+            <!-- Pink is the starting color -->
+            <button
+              class="color-button selected"
+              data-color="0xff77c8"
+              aria-label="Rosa"
+              aria-pressed="true"
+            ></button>
+
+            <!-- Purple -->
+            <button
+              class="color-button"
+              data-color="0x9c86ff"
+              aria-label="Lila"
+              aria-pressed="false"
+            ></button>
+
+            <!-- Turquoise -->
+            <button
+              class="color-button"
+              data-color="0x65ddff"
+              aria-label="Turkos"
+              aria-pressed="false"
+            ></button>
+          </div>
+
+          <!-- Clear the drawing -->
+          <button id="clear-button" class="clear-button">Clear 🧹</button>
+        </div>
+
+        <!-- PixiJS adds the canvas inside this div -->
+        <div id="drawing-canvas" aria-label="Interaktiv rityta"></div>
+
+        <!-- Make the drawing glow and sparkle -->
+        <button id="life-button" class="life-button">
+          ✨ Bring it to Life
+        </button>
+
+        <!-- Messages from the drawing app appear here -->
+        <p id="drawing-message" class="drawing-message" aria-live="polite">
+          Try drawing a heart, a flower or a little star!
+        </p>
+      </section>
+
+      <!-- Photos and video from my real project -->
+      <section class="content-card" id="preview">
+        <p class="section-label">03 / PROJECT PREVIEW</p>
+
+        <h2>A little sneak peek 👀</h2>
+
+        <p>
+          Här är några bilder från Draw to Life! Projektet låter användaren
+          skapa sina egna teckningar och utforska kreativitet med teknik.
+        </p>
+
+        <!-- Five photos from my Draw to Life project -->
+        <div class="project-gallery">
+          <!-- Photo 1 -->
+          <figure class="project-photo">
+            <img
+              src="images/draw-img.jpeg"
+              alt="Draw to Life visas på en ritplatta"
+              loading="lazy"
+            />
+            <figcaption>Draw to Life in action 🎨</figcaption>
+          </figure>
+
+          <!-- Photo 2 -->
+          <figure class="project-photo">
+            <img
+              src="images/Draw-1.jpeg"
+              alt="En teckning visas i Draw to Life"
+              loading="lazy"
+            />
+            <figcaption>A little creative moment ✨</figcaption>
+          </figure>
+
+          <!-- Photo 3 - I will add this image later -->
+          <figure class="project-photo">
+            <img
+              src="images/photo-3.jpeg"
+              alt="Another moment from my Draw to Life project"
+              loading="lazy"
+            />
+            <figcaption>Exploring creativity 💖</figcaption>
+          </figure>
+
+          <!-- Photo 4 - I will add this image later -->
+          <figure class="project-photo">
+            <img
+              src="images/photo-4.jpeg"
+              alt="A drawing made with Draw to Life"
+              loading="lazy"
+            />
+            <figcaption>From sketch to art ✨</figcaption>
+          </figure>
+
+          <!-- Photo 5 - I will add this image later -->
+          <figure class="project-photo">
+            <img
+              src="images/photo-5.jpeg"
+              alt="My Draw to Life project in use"
+              loading="lazy"
+            />
+            <figcaption>A little imagination goes a long way 🎨</figcaption>
+          </figure>
+        </div>
+
+        <p class="gallery-note">From a simple sketch to a creative surprise.</p>
+
+        <!-- A short video showing how my project works -->
+        <div class="project-video">
+          <h3>Watch Draw to Life in action 🎬</h3>
+
+          <video controls playsinline preload="metadata">
+            <source src="images/draw_video.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+
+          <p>A little look at my creative process.</p>
+        </div>
+      </section>
+
+      <!-- A little bit about me -->
+      <section class="content-card about-me" id="about-me">
+        <p class="section-label">04 / MEET THE CREATOR</p>
+
+        <h2>Hi, I'm Hanan! 🎀✨</h2>
+
+        <p>
+          Hej! Jag heter <strong>Hanan Mughrabi</strong>
+          och är en positiv, kreativ person som älskar att hitta lösningar på
+          problem.
+        </p>
+
+        <p>
+          Jag gillar att tänka utanför boxen, testa nya idéer och göra något
+          roligt av dem.
+        </p>
+
+        <!-- Why I chose these colors for my website -->
+        <h3>A little pink, a little sparkle! 🩷</h3>
+
+        <p>
+          Rosa är en självklar del av min värld – helt enkelt för att allt rosa
+          är så gulligt! Därför ville jag att min hemsida skulle vara färgglad,
+          lekfull och fylld med personlighet.
+        </p>
+
+        <!-- Why this project is important to me -->
+        <h3>Why Draw to Life? 🎨</h3>
+
+        <p>
+          Det jag älskar mest med Draw to Life är att projektet ger alla en
+          chans att vara kreativa och konstnärliga, oavsett hur bra man tycker
+          att man är på att rita.
+        </p>
+
+        <p>
+          För mig handlar kreativitet om att våga testa, leka med idéer och
+          upptäcka nya möjligheter.
+        </p>
+
+        <!-- What I hope visitors feel -->
+        <h3>My goal? ✨</h3>
+
+        <p>
+          Att du som besöker min hemsida ska känna både nyfikenhet och glädje –
+          och kanske bli inspirerad att skapa något själv!
+        </p>
+
+        <p class="personal-quote">
+          Stay curious, stay creative &amp; add a little pink magic! 💖
+        </p>
+      </section>
+
+      <!-- The bottom of my website -->
+      <footer>
+        <p>Made with creativity, code &amp; pink magic 🩷</p>
+        <p>Hanan Mughrabi · Creative Programming · 2026</p>
+      </footer>
+    </main>
+  </body>
+</html>
